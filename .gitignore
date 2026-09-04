@@ -1,0 +1,33 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# editor / os
+.DS_Store
+.idea/
+.prettiercache
+
+# ai agents
+.agents/
+.claude/
+
+# local working files that are not part of this site
+portfolio/
+Mockup/
+Project Assets/
+Resume.json
+*.txt
+!public/robots.txt

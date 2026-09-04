@@ -1,0 +1,25 @@
+---
+import { MailIcon } from "@lucide/astro"
+
+import ContactForm from "@/components/contact/ContactForm.astro"
+---
+
+<section id="contact" class="space-y-8">
+  <div class="flex items-center gap-x-4">
+    <MailIcon size="20" stroke-width="1.5" />
+    <h2 class="text-3xl font-semibold tracking-tight">get in touch</h2>
+  </div>
+
+  <div data-contact-form class="space-y-8">
+    <p class="max-w-prose leading-relaxed text-pretty">
+      Freelance, full-time, or a half-formed idea you want a second opinion on — all welcome. I read every message.
+    </p>
+
+    <ContactForm />
+  </div>
+
+  <div data-contact-success class="hidden space-y-2">
+    <h3 class="text-xl font-semibold tracking-tight">Thank you for reaching out.</h3>
+    <p class="text-muted">Your message was received. I read everything and usually reply within a few days.</p>
+  </div>
+</section>

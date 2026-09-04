@@ -1,0 +1,33 @@
+---
+import type { Certification } from "@/collections/certifications"
+import { formatMonthYear } from "@/utils/date"
+
+interface Props {
+  certification: Certification
+}
+
+const { certification } = Astro.props
+const { name, issuer, issuedAt, url } = certification.data
+---
+
+<article class="flex items-start justify-between gap-4 border-t py-4 first:border-t-0 first:pt-0 last:pb-0">
+  <div class="space-y-0.5">
+    <h3 class="font-body font-medium">{name}</h3>
+    <p class="text-sm text-muted">
+      {issuer}
+      {
+        url && (
+          <>
+            {" · "}
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              verify
+            </a>
+          </>
+        )
+      }
+    </p>
+  </div>
+  <time class="shrink-0 text-sm text-muted italic" datetime={issuedAt.toISOString()}>
+    {formatMonthYear(issuedAt)}
+  </time>
+</article>

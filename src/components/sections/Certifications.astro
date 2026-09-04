@@ -1,0 +1,19 @@
+---
+import { AwardIcon } from "@lucide/astro"
+
+import { getCertifications } from "@/collections/certifications"
+import CertificationCard from "@/components/certifications/CertificationCard.astro"
+
+const certifications = await getCertifications()
+---
+
+<section id="certifications" class="space-y-6">
+  <div class="flex items-center gap-x-4">
+    <AwardIcon size="20" stroke-width="1.5" />
+    <h2 class="text-3xl font-semibold tracking-tight">certifications</h2>
+  </div>
+
+  <div>
+    {certifications.map((certification) => <CertificationCard certification={certification} />)}
+  </div>
+</section>

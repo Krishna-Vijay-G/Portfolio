@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+portfolio/
+Mockup/
+Project Assets/
+package-lock.json
